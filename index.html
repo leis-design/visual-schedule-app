@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Schedule Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="banner">
+        <img
+          id="banner-image"
+          src="imgs/lassonde_pattern_1.png"
+          alt="Lassonde banner"
+        />
+        <img id="logo" src="imgs/lassondeLogo.svg" alt="Lassonde logo" />
+      </div>
+    </header>
+    <main>
+      <div id="instruction-block">
+      <div id="instructions">
+        <div id="instruction-title"><h2>Instructions</h2></div>
+        <div id="instruction-1" class="instruction">
+            <h3>Add an event</h3>
+            To add an event click on the day square you wish to add the event
+            to, and select the type of event you would like to add, then click
+            the save button.
+        </div>
+        <div id="instruction-2" class="instruction">
+          <h3>Add a custom event</h3>
+          To add a custom event, follow the steps for selecting an event, and
+          from the drop-down menu select “other”. A box will pop up and you can
+          type in the name of the custom event you would like to create.
+        </div>
+        <div id="instruction-3" class="instruction">
+          <h3>Add repeating event</h3>
+          To add an event which repeats weekly, in the new event creation pop-up
+          select “repeat weekly”.
+        </div>
+        <div id="instruction-4" class="instruction">
+          <h3>Deleting an event</h3>
+          To delete an event, click on the day square you wish to delete an
+          event from, after selecting the “delete event” option, the delete
+          event pop-up will be displayed. The drop-down menu of events follows
+          the same order as the events displayed in the tile. Select from the
+          drop-down menu which event you wish to delete and click the “delete
+          selected event” button.
+        </div>
+        <div id="instruction-5" class="instruction">
+          <h3>Deleting all events</h3>
+          To delete an event, click on the day square you wish to delete an
+          event from, after selecting the “delete event” option, the delete
+          event pop-up will be displayed. To delete all of the events for a
+          specific day square click the “Delete All” button. If you wish to
+          delete all of the events on the entire schedule, just refresh the
+          webpage.
+        </div>
+        <div id="instruction-6" class="instruction">
+          <h3>Transferring schedule to eClass</h3>
+          Once you have created the schedule and wish to transfer it to class,
+          scroll to the bottom of the page and press the “Save HTML” button
+          followed by the “Copy to Clipboard” button and this will copy the code
+          into your clipboard. Locate the area in eclass you wish to have the
+          schedule, open up the code editor and paste the code into the code
+          editor and press save.
+        </div>
+      </div>
+    </div>
+      <div id="wrapper">
+        <!-- Inject CSS into LMS
+                <script type="text/javascript">
+                    // <![CDATA[
+                    var cssRules = ".grid-item { width: 150px; height: 150px; box-sizing: border-box; background-color: rgb(238, 213, 213); box-shadow: 2px 2px 6px 2px #d6d6d6; } .day { background-color: rgb(179, 34, 34); height: 40px; text-align: center; vertical-align: middle; line-height: 40px; border-radius: 5px; } .week { background-color: rgb(179, 34, 34); width: 40px; text-align: center; border-radius: 5px; } .week-text { width: 130px; display: inline-block; position: relative; top: 50%; right: 115%; transform: translateY(-50%) rotate(-90deg); } .content { cursor: pointer; width: 150px; height: 150px; } .event { width: 140px; margin: 5px 1px 5px 2px; color: rgb(0, 0, 0); } .event-content { display: inline-block; width: 125px; margin-left: 2px; } .symbol-wrapper { display: inline-block; width: 10px; margin-left: 2px; } .symbol { height: 100%; max-width: 100%; } .lecture { background-color: rgb(255, 200, 200); } .lab { background-color: rgb(255, 249, 200); } .tutorial { background-color: rgb(206, 255, 200); } .office-hours { background-color: rgb(185, 205, 241); } .quiz, .midterm, .final-exam { background-color: rgb(200, 239, 255); } .assessment-due, .project-due { background-color: rgb(242, 200, 255); } .other { background-color: rgb(245, 245, 245); } .delete-modal-buttons { width: 75px; height: 75px; background-color: #d36c6c; margin-top: 10px; margin-right: 5px; } #option-buttons-container { display: flex; align-items: center; } .option-buttons { width: 75px; height: 75px; margin-right: 5px; } .instruction{ background-color: #cfcfcf; width: 100%; } #banner { background-color: #964848; width: 100%; height: 50px; text-align: center; margin-bottom: 175px; display: block; } #banner-image{ width: 100%; } #logo{ float: left; width: 25%; } #instructions { background-color: #949494; margin-bottom: 20px; width: 100%; display: grid; grid-template-columns: repeat(2, 50%); grid-template-rows: repeat(3, 33.33%); } #wrapper { font-family: Arial, sans-serif; color: rgb(255, 255, 255); display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; } #grid-container { margin: 0 auto; display: grid; grid-template-columns: 50px repeat(7, 160px); grid-template-rows: 50px repeat(12, 160px); } #options-modal, #save-event-modal, #delete-event-modal { display: none; z-index: 20; padding: 25px; background-color: #e8f4fa; color: black; box-shadow: 0px 0px 3px black; border-radius: 5px; position: fixed; top: 40%; left: 50%; transform: translate(-50%, -50%); width: 35%; } #modal-backdrop { display: none; position: fixed; bottom: 0; right: 0; left: 0; top: 0; z-index: 10; background-color: rgba(0, 0, 0, 0.8); } #new-event-modal-button, #delete-event-modal-button, #save-button, #close-button { background-color: #92a1d1; } #cancel-button-1, #cancel-button-2 { background-color: #d36c6c; } #delete-modal-buttons-container { display: flex; align-items: center; } #event-label-input { display: none; } #event-selector-form{ margin-top: 20px; } #html-copier { margin-top: 20px; padding-top: 20px; background-color: #cfcfcf; } #raw-html-container { display: block; margin: 0 auto; } textarea { resize: none; display: block; margin: 0 auto; margin-bottom: 20px; } #html-copier-buttons { display: flex; justify-content: center; align-items: center; height: 100%; } #save-HTML-button, #copy-HTML-button { background-color: rgb(179, 34, 34); margin: 5px; }";
+                    var styleElement = document.createElement("style");
+                    styleElement.appendChild(document.createTextNode(cssRules));
+                    document.getElementsByTagName("head")[0].appendChild(styleElement);
+                    // ]]>
+                </script>
+            -->
+
+        <div id="grid-container">
+          <div id="padding-tile"></div>
+        </div>
+      </div>
+    </main>
+    <section id="html-copier">
+      <textarea id="text-area" readonly rows="20" cols="100"> </textarea>
+      <div id="html-copier-buttons">
+        <button id="save-HTML-button">Save HTML</button>
+        <button id="copy-HTML-button">Copy to Clipboard</button>
+      </div>
+    </section>
+    <section id="modals">
+      <div id="options-modal">
+        <h2>Please select:</h2>
+        <div id="option-buttons-container">
+          <button class="option-buttons" id="new-event-modal-button">
+            Create new event
+          </button>
+          <button class="option-buttons" id="delete-event-modal-button">
+            Delete existing event
+          </button>
+          <button class="option-buttons" id="cancel-button-1">Cancel</button>
+        </div>
+      </div>
+
+      <div id="save-event-modal">
+        <h2>New Event</h2>
+
+        <p>Select type of event:</p>
+
+        <form id="event-selector-form">
+          <select id="event-type-selector">
+            <option id="lecture" value="lecture" selected>lecture</option>
+            <option value="lab">lab</option>
+            <option value="tutorial">tutorial</option>
+            <option value="office-hours">office hours</option>
+            <option value="assessment-due">assessment due</option>
+            <option value="project-due">project due</option>
+            <option value="quiz">quiz</option>
+            <option value="midterm">midterm</option>
+            <option value="final-exam">final exam</option>
+            <option value="other">other</option>
+          </select>
+        </form>
+
+        <br />
+
+        <form>
+          <select id="occurrence-type-selector">
+            <option value="no repeat">Don't repeat</option>
+            <option value="repeat">Repeat weekly</option>
+          </select>
+        </form>
+
+        <br />
+
+        <div id="event-label-input">
+          <p>Enter event name (14 character limit):</p>
+          <input type="text" id="text-box-input" maxlength="14" />
+        </div>
+
+        <br />
+        <br />
+
+        <button id="save-button">Save</button>
+        <button id="cancel-button-2">Cancel</button>
+      </div>
+
+      <div id="delete-event-modal">
+        <h2>Select the event you would like to delete:</h2>
+
+        <form>
+          <select id="event-selector"></select>
+        </form>
+
+        <div id="delete-modal-buttons-container">
+          <button class="delete-modal-buttons" id="delete-button">
+            Delete Selected Event
+          </button>
+          <button class="delete-modal-buttons" id="delete-all-button">
+            Delete All
+          </button>
+          <button class="delete-modal-buttons" id="close-button">Close</button>
+        </div>
+      </div>
+      <div id="modal-backdrop"></div>
+    </section>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

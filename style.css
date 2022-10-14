@@ -1,0 +1,292 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* End of Resets */
+
+/* Elements */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
+
+/* End of Elements */
+
+/* Classes */
+.grid-item {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  background-color: rgb(238, 213, 213);
+  box-shadow: 2px 2px 6px 2px #d6d6d6;
+}
+
+.day {
+  background-color: rgb(179, 34, 34);
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  border-radius: 5px;
+}
+
+.week {
+  background-color: rgb(179, 34, 34);
+  width: 40px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.week-text {
+  width: 130px;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  right: 115%;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.content {
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+}
+
+.event {
+  width: 140px;
+  margin: 5px 1px 5px 2px;
+  color: rgb(0, 0, 0);
+}
+
+.event-content {
+  display: inline-block;
+  width: 125px;
+  margin-left: 2px;
+}
+
+.symbol-wrapper {
+  display: inline-block;
+  width: 10px;
+  margin-left: 2px;
+}
+
+.symbol {
+  height: 100%;
+  max-width: 100%;
+}
+
+.lecture {
+  background-color: rgb(255, 200, 200);
+}
+
+.lab {
+  background-color: rgb(255, 249, 200);
+}
+
+.tutorial {
+  background-color: rgb(206, 255, 200);
+}
+
+.office-hours {
+  background-color: rgb(185, 205, 241);
+}
+
+.quiz,
+.midterm,
+.final-exam {
+  background-color: rgb(200, 239, 255);
+}
+
+.assessment-due,
+.project-due {
+  background-color: rgb(242, 200, 255);
+}
+
+.other {
+  background-color: rgb(245, 245, 245);
+}
+
+.delete-modal-buttons {
+  width: 75px;
+  height: 75px;
+  background-color: #d36c6c;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+#option-buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+.option-buttons {
+  width: 75px;
+  height: 75px;
+  margin-right: 5px;
+}
+
+.instruction{ 
+  background-color: #cfcfcf;
+  width: 100%;
+  padding: 0.4%;
+}
+
+/* End of Classes */
+
+/* IDs */
+#banner {
+  background-color: #964848;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin-bottom: 175px;
+  display: block;
+}
+
+#banner-image{
+  width: 100%;
+}
+
+#logo{
+  float: left;
+  width: 25%;
+}
+
+#instructions {
+  background-color: #949494;
+  margin-bottom: 50px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 10% repeat(3, 33.33%);
+}
+
+#instruction-title{
+  height: 50px;
+  grid-column: 1 / 3; 
+}
+
+#wrapper {
+  font-family: Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#grid-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50px repeat(7, 160px);
+  grid-template-rows: 50px repeat(12, 160px);
+}
+
+#options-modal,
+#save-event-modal,
+#delete-event-modal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #e8f4fa;
+  color: black;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+}
+
+#modal-backdrop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#new-event-modal-button,
+#delete-event-modal-button,
+#save-button,
+#close-button {
+  background-color: #92a1d1;
+}
+
+#cancel-button-1,
+#cancel-button-2 {
+  background-color: #d36c6c;
+}
+
+#delete-modal-buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+#event-label-input {
+  display: none;
+}
+
+#event-selector-form{
+  margin-top: 20px;
+}
+
+#html-copier {
+  margin-top: 20px;
+  padding-top: 20px;
+  background-color: #cfcfcf;
+}
+
+#raw-html-container {
+  display: block;
+  margin: 0 auto;
+}
+
+textarea {
+  resize: none;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#html-copier-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#save-HTML-button,
+#copy-HTML-button {
+  background-color: rgb(179, 34, 34);
+  margin: 5px;
+}
+
+/* End of IDs */
